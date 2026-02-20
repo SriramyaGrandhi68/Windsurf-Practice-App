@@ -5,19 +5,7 @@
         <active>true</active>
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
-    
-    // Show confirmation dialog
-    var answer = confirm('Are you sure you want to close this incident?');
-    
-    if (answer) {
-        // User clicked OK, proceed with closing the incident
-        g_form.setValue('state', '6'); // State 6 = Closed in ServiceNow
-        g_form.save();
-        
-        // Show success message
-        g_form.addInfoMessage('Incident closed successfully');
-    }
-    
+
 }]]></client_script_v2>
         <comments/>
         <condition>current.state!=6</condition>
@@ -42,9 +30,18 @@
         <list_style/>
         <messages/>
         <name>Close Incident</name>
-        <onclick>onClick()</onclick>
+        <onclick>OnClick()</onclick>
         <order>200</order>
-        <script><![CDATA[// Client script handled in onClick function]]></script>
+        <script><![CDATA[function OnClick()
+{
+	var answer = confirm('Are you sure you want to close this incident?');
+	
+	if (answer) {
+		g_form.setValue('state', '6');
+		g_form.save();
+		g_form.addInfoMessage('Incident closed successfully');
+	}
+}]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
