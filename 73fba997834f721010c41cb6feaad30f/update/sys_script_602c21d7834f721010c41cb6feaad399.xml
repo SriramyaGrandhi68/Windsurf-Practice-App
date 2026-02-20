@@ -13,7 +13,7 @@
         <client_callable>false</client_callable>
         <collection>incident</collection>
         <condition/>
-        <description>Automatically sets the Caller to the currently logged-in user when the Caller field is empty during incident creation.</description>
+        <description>Automatically sets the Description when empty during incident creation.</description>
         <execute_function>false</execute_function>
         <filter_condition table="incident">descriptionISEMPTY^EQ<item endquery="false" field="description" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>

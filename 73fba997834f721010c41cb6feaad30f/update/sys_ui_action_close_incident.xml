@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_ui_action" sys_domain="global">
+<record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name>close_incident</action_name>
         <active>true</active>
@@ -42,7 +42,7 @@
         <list_style/>
         <messages/>
         <name>Close Incident</name>
-        <onclick/>
+        <onclick>onClick()</onclick>
         <order>200</order>
         <script><![CDATA[// Client script handled in onClick function]]></script>
         <show_insert>true</show_insert>
